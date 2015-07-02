@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.php$ /$1 [L,R=301] 
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 106.72.0.0/15
+deny from 106.128.0.0/10
+deny from 117.128.0.0/10
